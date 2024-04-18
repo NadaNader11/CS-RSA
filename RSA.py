@@ -90,6 +90,20 @@ while e < eul:
     else:
         e+=1
 
+def brute_force_private_exponent(e, phi_n):
+    d = 2 
+    while True: 
+        if (d * e) % phi_n == 1:
+            return d 
+        d += 1
+
+def generate_test_cases():
+    
+
+
+
+
+
 
 
 def extended_euclidean_algorithm(a, b):
