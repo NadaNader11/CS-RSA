@@ -166,13 +166,22 @@ start = time.perf_counter()
 d=pow(e,-1,eul)
 End = time.perf_counter()
 runtime = End - start
-print(f"The time taken to get d is {runtime}")
+
+brute_start = time.perf_counter()
+d=brute_force_private_exponent(e,eul)
+brute_end = time.perf_counter()
+brute_run = brute_end-brute_start
+
+
 print(f"public{e,n}")
 print(f"private{d,n}")
 
 c=pow(m,e,n)
 M=pow(c,d,n)
 print(m,c,M)
+
+print(f"The time taken to get d using the extended Euclidean algorithm is {runtime} seconds")
+print(f"The time taken to get d using the brute force algorithm is {brute_run} seconds")
 
 
 
