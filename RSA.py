@@ -121,8 +121,11 @@ def brute_force_private_exponent(e, phi_n):
     d = 2 
     while True: 
         if (d * e) % phi_n == 1:
+            # start2 = time.perf_counter()
             return d 
+        # end2= time.perf_counter() 
         d += 1
+
         
 # def choose_bit_length():
 #     # def generate_test_cases():
@@ -170,7 +173,6 @@ print(f"private{d,n}")
 c=pow(m,e,n)
 M=pow(c,d,n)
 print(m,c,M)
-
 
 
 
