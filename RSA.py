@@ -54,25 +54,6 @@ def bits():
            return factor_modulus
 
 
-
-# def input_prime(prompt):
-#     while True:
-#         num = int(input(prompt))
-#         if is_prime(num):
-#             return num 
-#         print("Invalid input. Please enter a prime number.")
-
-
-# def prime_numbers(x):
-#     if x <= 1:
-#         return False
-#     for i in range(2, n // 2+1):
-#         if x % i == 0:
-#             return True
-#         else:
-#             return False 
-# print(prime_numbers(q))
-
 def factor_modulus():
     def private_exponent(e, p, q):
         eul = (p - 1) * (q - 1)
@@ -121,31 +102,11 @@ def brute_force_private_exponent(e, phi_n):
     d = 2 
     while True: 
         if (d * e) % phi_n == 1:
-            # start2 = time.perf_counter()
+          
             return d 
-        # end2= time.perf_counter() 
         d += 1
 
         
-# def choose_bit_length():
-#     # def generate_test_cases():
-#         def generate_prime(): 
-#             def test_cases():
-#                  for bits in [8, 16]:
-#                     while True:
-#                      choice = input("Choose the bit length (8 or 16)")
-#                      if choice in ['8', '16']:
-#                         return int(choice)
-#                      else: 
-#                         print("Invalid please enter a number of 8 or 16")
-#                         test_cases = []
-#             p = generate_prime(bits)
-#             q = generate_prime(bits)
-#             N = p * q 
-#             e = 3
-#             test_cases.append((N, e))
-#             return test_cases
-
 
 def extended_euclidean_algorithm(a, b):
     if b == 0:
